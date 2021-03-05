@@ -53,7 +53,7 @@ $slide_id = absint($peruse_theme_options['peruse-select-category']);
                 <div class="entry-meta">
                   <ul>
                     <li><?php peruse_posted_on(); ?></li>
-                    <li><?php  prefer_blog_read_time(); ?></li>
+                    <li><?php peruse_read_time(); ?></li>
                   </ul>
                 </div>
               </div>

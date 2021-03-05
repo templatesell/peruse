@@ -254,13 +254,13 @@ add_action( 'widgets_init', 'peruse_widgets_init' );
 
 
 /* Word read count Pagination */
-if (!function_exists('prefer_blog_read_time')) :
+if (!function_exists('persue_read_time')) :
     /**
      * @param $content
      *
      * @return string
      */
-    function prefer_blog_read_time()
+    function peruse_read_time()
     {
         $content = apply_filters('the_content', get_post_field('post_content'));
         $read_words = 200;
@@ -272,7 +272,7 @@ if (!function_exists('prefer_blog_read_time')) :
         $word_per_min = ceil($word_per_min);
 
         if (absint($word_per_min) > 0) {
-            $word_count_strings = sprintf(_n('%s Min Reading', '%s Min Reading', number_format_i18n($word_per_min), 'prefer-blog'), number_format_i18n($word_per_min));
+            $word_count_strings = sprintf(_n('%s Min Reading', '%s Min Reading', number_format_i18n($word_per_min), 'peruse'), number_format_i18n($word_per_min));
             if ('post' == get_post_type()):
                 echo '<span class="min-read">';
                 echo esc_html($word_count_strings);
