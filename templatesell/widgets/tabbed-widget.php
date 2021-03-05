@@ -89,7 +89,8 @@ if (!class_exists('Peruse_Tabbed')) :
                                         <div class="widget_featured_content">
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
-                                                <?php echo get_the_date(); ?>
+                                                <span><?php echo get_the_date(); ?></span>
+                                                <?php prefer_blog_read_time(); ?>
                                             </div><!-- .entry-meta -->
                                         </div>
                                     </div>
@@ -136,7 +137,8 @@ if (!class_exists('Peruse_Tabbed')) :
                                         <div class="widget_featured_content">
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
-                                                <?php echo get_the_date(); ?>
+                                                <span><?php echo get_the_date(); ?></span>
+                                                <?php prefer_blog_read_time(); ?>
                                             </div><!-- .entry-meta -->
                                         </div>
                                     </div>

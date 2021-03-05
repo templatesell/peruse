@@ -30,7 +30,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* body */
 body {
-    font-family: 'Muli', sans-serif;
+    
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
@@ -66,7 +67,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 15px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: 1.5;
@@ -1865,7 +1866,7 @@ section.slider-wrapper {
     padding: 40px;
 }
 .slide-info h2 a{
-    font-size: 40px;
+    font-size: 36px;
     line-height: normal;
 }
 .slide-info .entry-meta ul{
@@ -1874,7 +1875,21 @@ section.slider-wrapper {
 }
 .slide-info .entry-meta ul li{
     padding: 5px 0;
+    margin-bottom: 15px;
     list-style: none;
+    display: inline-block;
+}
+.post-date span::after,
+.entry-meta ul li>span::after {
+    content: '/';
+    margin: 0 3px 0 6px;
+}
+.post-date span:last-of-type::after,
+.entry-meta ul li:last-of-type span::after {
+    display: none;
+}
+.entry-meta ul li .min-read{
+    color: #4c4f53;
 }
 @media (min-width: 768px){
     .d-md-table {
@@ -1884,7 +1899,7 @@ section.slider-wrapper {
         display: table-cell !important;
     }
     .slide-image{
-        width: 60%;
+        width: 65%;
     }
 }
 .modern-slider .slide-wrap .caption span i{
