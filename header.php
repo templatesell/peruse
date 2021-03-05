@@ -55,7 +55,7 @@ if ( function_exists( 'wp_body_open' ) ) {
     <?php } ?>
 
     <?php if ($enable_box == 1 && (is_home() || is_front_page() ) )  { ?>
-        <section class="promo-slider-wrapper">
+        <section class="promo-wrapper">
             <?php
             
             /*

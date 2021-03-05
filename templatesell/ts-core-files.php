@@ -63,6 +63,7 @@ require get_template_directory() . '/templatesell/widgets/widget-init.php';
 require get_template_directory() . '/templatesell/widgets/ts-author-widget.php';
 require get_template_directory() . '/templatesell/widgets/ts-recent-posts-widget.php';
 require get_template_directory() . '/templatesell/widgets/ts-social-widget.php';
+require get_template_directory() . '/templatesell/widgets/tabbed-widget.php';
 
 /**
  * Load Hooks

@@ -12,9 +12,8 @@
             slidesToScroll: 1,
             adaptiveHeight: true,
             slidesToShow: 1,
-            arrows: true,
-            dots: false,
-            fade: true,
+            arrows: false,
+            dots: true,
     	});
 
         // Boxes Section
@@ -64,6 +63,20 @@
 					scrollTop:0
 				},"slow");
 			});
-	  	}       
+	  	} 
+	  	// Change tab class and display content
+		$('.tabs-nav a').on('click', function (event) {
+		    event.preventDefault();
+
+		    $('.tab-active').removeClass('tab-active');
+		    $(this).parent().addClass('tab-active');
+		    $('.tab-content>div').hide();
+		    $($(this).attr('href')).show();
+		});
+
+		$('.tabs-nav a:first').trigger('click'); // Default
+		$('.closebtn').on('click', function(){
+			t.close();
+ 		});      
  	}); 	
 })(jQuery);

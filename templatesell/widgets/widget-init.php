@@ -17,6 +17,9 @@ if ( ! function_exists( 'peruse_load_widgets' ) ) :
 		
 		// Social Widget.
         register_widget( 'Peruse_Social_Widget' );
+
+        // Tabbed Widget.
+        register_widget( 'Peruse_Tabbed' );
     }
 endif;
 add_action( 'widgets_init', 'peruse_load_widgets' );

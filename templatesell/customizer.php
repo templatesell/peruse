@@ -45,9 +45,9 @@ if ( !function_exists('peruse_default_theme_options_values') ) :
             'peruse-promo-select-category'=> 0,
             
             /*Blog Page*/
-            'peruse-sidebar-blog-page' => 'right-sidebar',
-            'peruse-column-blog-page'  => 'one-column',
-            'peruse-blog-image-layout' => 'left-image',
+            'peruse-sidebar-blog-page' => 'no-sidebar',
+            'peruse-column-blog-page'  => 'masonry-post',
+            'peruse-blog-image-layout' => 'full-image',
             'peruse-content-show-from' => 'excerpt',
             'peruse-excerpt-length'    => 25,
             'peruse-pagination-options'=> 'numeric',

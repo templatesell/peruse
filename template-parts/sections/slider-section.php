@@ -30,36 +30,36 @@ $slide_id = absint($peruse_theme_options['peruse-select-category']);
           $image_id = get_post_thumbnail_id();
           $image_url = wp_get_attachment_image_src( $image_id,'',true );
         ?>
-				<div class="slider-items slider-height">
-          <div class="slide-wrap">
-              <div class="entry-meta">
-                <ul>
-                  <li>
-                      <?php
-                        $categories = get_the_category();
-                        if ( ! empty( $categories ) ) {
-                        echo '<a class="s-cat" href="'.esc_url( get_category_link( $categories[0]->term_id ) ).'">'.esc_html( $categories[0]->name ).'</a>';
-                      }                                 
-                      ?>
-                  </li>
-                  <li><?php peruse_posted_on(); ?></li>
-                </ul>
-              </div>
-              <!-- <div class="img-cover" style="background-image: url(<?php //echo esc_url($image_url[0]);?>)">
-              </div> -->
+				
+          <div class="slide-post d-md-table">
+            <div class="slide-image d-md-table-cell">
               <?php the_post_thumbnail('full'); ?>
-            	<div class="caption">
-                    <div class="inner-wrapper">
-              		    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                      <div class="btn-wrapper">
-                        <a class="more-btn" href="<?php the_permalink(); ?>"><?php _e('Continue Reading', 'peruse'); ?></a>
-                      </div>
-                  </div>
-            	</div>
+            </div>
+            <div class="slide-info d-md-table-cell">
+              <div class="inner-wrapper">
+                <div class="entry-meta">
+                  <ul>
+                    <li>
+                        <?php
+                          $categories = get_the_category();
+                          if ( ! empty( $categories ) ) {
+                          echo '<a class="s-cat" href="'.esc_url( get_category_link( $categories[0]->term_id ) ).'">'.esc_html( $categories[0]->name ).'</a>';
+                        }                                 
+                        ?>
+                    </li>
+                  </ul>
+                </div>
+        		    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <div class="entry-meta">
+                  <ul>
+                    <li><?php peruse_posted_on(); ?></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <?php } endwhile;
-        wp_reset_postdata(); ?>
-    </div>
+          <?php } endwhile;
+          wp_reset_postdata(); ?>
+      </div>
   </div>
 <?php endif; ?>
