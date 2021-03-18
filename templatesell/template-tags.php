@@ -41,7 +41,7 @@ if ( ! function_exists( 'peruse_posted_by' ) ) :
 	function peruse_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'peruse' ),
+			esc_html_x('by %s', 'post author', 'peruse' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
         echo '<span class="post_by"> ' . $byline . '</span>'; // WPCS: XSS OK.
@@ -56,7 +56,7 @@ if ( ! function_exists( 'peruse_entry_meta' ) ) :
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'peruse' ) );
+		$categories_list = get_the_category_list( esc_html__( '&nbsp;', 'peruse' ) );
 
 		if ( $categories_list ) {
 			echo '<span class="cat-links">' . $categories_list . '</span>';

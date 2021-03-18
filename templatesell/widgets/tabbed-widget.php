@@ -36,15 +36,19 @@ if (!class_exists('Peruse_Tabbed')) :
             }
             $popular_title = !empty($instance['popular_title']) ? $instance['popular_title'] : '';
             $recent_title = !empty($instance['recent_title']) ? $instance['recent_title'] : '';
+            $commented_title = !empty($instance['commented_title']) ? $instance['commented_title'] : '';
             $post_number = !empty($instance['post-number']) ? $instance['post-number'] : '';
 
             ?>
+            <?php 
+                //$col = ( dynamic_sidebar('sidebar-1') ) ? 'col-sm-12 col-md-12 col-lg-12' : 'col-sm-3 col-md-3 col-lg-3';
+            ?>
             <ul class="tabs-nav">
                 <?php if(!empty($recent_title)){ ?>
-                <li class="tab-active"><i class="fa fa-clock-o"></i><a data-toggle="tab" href="#menu1"><?php echo esc_html($recent_title); ?></a></li>
+                <li class="tab-active"><i class="fa fa-clock-o"></i><a data-toggle="tab" href="#menu1"><?php esc_html_e($recent_title); ?></a></li>
                 <?php } ?>
                 <?php if(!empty($popular_title)){ ?>
-                <li class=""><i class="fa fa-bookmark-o"></i><a data-toggle="tab" href="#home"><?php echo esc_html($popular_title); ?></a></li>
+                <li class=""><i class="fa fa-bookmark-o"></i><a data-toggle="tab" href="#home"><?php esc_html_e($popular_title); ?></a></li>
                 <?php } ?>
             </ul>
 
@@ -86,7 +90,7 @@ if (!class_exists('Peruse_Tabbed')) :
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
                                                 <span><?php echo get_the_date(); ?></span>
-                                                <?php peruse_read_time(); ?>
+                                                <?php prefer_blog_read_time(); ?>
                                             </div><!-- .entry-meta -->
                                         </div>
                                     </div>
@@ -134,7 +138,7 @@ if (!class_exists('Peruse_Tabbed')) :
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
                                                 <span><?php echo get_the_date(); ?></span>
-                                                <?php peruse_read_time(); ?>
+                                                <?php prefer_blog_read_time(); ?>
                                             </div><!-- .entry-meta -->
                                         </div>
                                     </div>
@@ -160,6 +164,7 @@ if (!class_exists('Peruse_Tabbed')) :
             $instance['title'] = sanitize_text_field($new_instance['title']);
             $instance['popular_title'] = sanitize_text_field($new_instance['popular_title']);
             $instance['recent_title'] = sanitize_text_field($new_instance['recent_title']);
+            $instance['commented_title'] = sanitize_text_field($new_instance['commented_title']);
             $instance['post-number'] = absint($new_instance['post-number']);
 
             return $instance;
@@ -172,6 +177,7 @@ if (!class_exists('Peruse_Tabbed')) :
                 'title' => esc_html__('Recent Post', 'peruse' ),
                 'popular_title'=> esc_html__('Popular', 'peruse' ),
                 'recent_title'=> esc_html__('Recent', 'peruse' ),
+                'commented_title'=> esc_html__('Comment', 'peruse' ),
                 'post-number' => 5,
             );
             
@@ -200,11 +206,19 @@ if (!class_exists('Peruse_Tabbed')) :
             </p>
             <p>
                 <label
+                for="<?php echo esc_attr($this->get_field_id('commented_title')); ?>"><?php esc_html_e('Commented Title:', 'peruse'); ?></label>
+                <input class="widefat" id="<?php echo esc_attr($this->get_field_id('commented_title')); ?>"
+                name="<?php echo esc_attr($this->get_field_name('commented_title')); ?>" type="text"
+                value="<?php echo esc_attr($instance['commented_title']); ?>"/>
+            </p>
+            <p>
+                <label
                 for="<?php echo esc_attr($this->get_field_id('post-number')); ?>"><?php esc_html_e('Number of Posts to Display:', 'peruse'); ?></label>
                 <input class="widefat" id="<?php echo esc_attr($this->get_field_id('post-number')); ?>"
                 name="<?php echo esc_attr($this->get_field_name('post-number')); ?>" type="number"
                 value="<?php echo esc_attr($instance['post-number']); ?>"/>
             </p>
+
             <?php
         }
     }

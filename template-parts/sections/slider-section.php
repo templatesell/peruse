@@ -31,11 +31,11 @@ $slide_id = absint($peruse_theme_options['peruse-select-category']);
           $image_url = wp_get_attachment_image_src( $image_id,'',true );
         ?>
 				
-          <div class="slide-post d-md-table">
-            <div class="slide-image d-md-table-cell">
+          <div class="slide-post td-md-table">
+            <div class="slide-image td-table-cell">
               <?php the_post_thumbnail('full'); ?>
             </div>
-            <div class="slide-info d-md-table-cell">
+            <div class="slide-info td-table-cell">
               <div class="inner-wrapper">
                 <div class="entry-meta">
                   <ul>
@@ -53,7 +53,7 @@ $slide_id = absint($peruse_theme_options['peruse-select-category']);
                 <div class="entry-meta">
                   <ul>
                     <li><?php peruse_posted_on(); ?></li>
-                    <li><?php peruse_read_time(); ?></li>
+                    <li><?php  prefer_blog_read_time(); ?></li>
                   </ul>
                 </div>
               </div>
