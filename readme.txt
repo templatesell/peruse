@@ -30,72 +30,14 @@ Peruse includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
-= 1.1.2 - February 09 2021 =
-* Added pagination in search page
 
-= 1.1.1 - January 30 2021 =
-* Added option for header overlay color
-* Added option to change the header image height
-
-= 1.1.0 - January 01 2021 =
-* Added option to show hide tags in single page
-* Added option to change Menu text in mobile
-* Added option to change the menu text to hamberger menu in mobile
-* Tested with WordPress 5.6
-* Tested with php 7.4
-* Fixed some minor CSS issues
-
-= 1.0.9 - October 19 2020 =
-* Added link on blog page featured image
-
-= 1.0.8 - October 18 2020 =
-* Fixed Featured Image Option 
-* Fixed customizer call back issues
-* Removed the unwanted menu from functions file
-
-= 1.0.7 - September 23 2020 =
-* Fixed Read More in the content 
-* Fixed some minor CSS issues
-
-= 1.0.6 - September 06 2020 =
-* Fixed Masonry Issue
-* Tested with latest WP version. 
-* Fixed some minor CSS issues
-
-= 1.0.5 - August 24 2020 =
-* Fixed Masonry Issue
-* Fixed Keyboard Navigation
-* Fixed some minor css issues
-
-= 1.0.4 - August 13 2020 =
-* Default value of customizer changed
-* Fixed some minor css
-* Changed logo width default value
-
-= 1.0.3 - August 10 2020 =
-* Fixed Reviewer Issues
-
-= 1.0.2 - August 03 2020 =
-* Changed `add_theme_page` to `add_menu_page`
-* Screenshot Changed
-* Fixed some minor CSS issues
-* Tags Added
-
-= 1.0.1 - July 22 2020 =
-* Fixed breadcrumb issues
-* Added breadcrumb for plugin support
-* Added theme info page
-* Added upgrade to pro 
-* Added pro notice
-
-= 1.0.0 - July 16 2020 =
+= 1.0.0 - March 05 2021 =
 * Initial release
 
 == Credits ==
 
 Peruse is free WordPress theme by, Template Sell.
 Peruse is distributed under the terms of the GNU GPL v2 or later.
-
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
@@ -105,23 +47,26 @@ Peruse is distributed under the terms of the GNU GPL v2 or later.
 * Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.6.3 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
 * imagesLoaded MIT License https://imagesloaded.desandro.com/#mit-license
 * Canvi The MIT License (MIT) https://github.com/thepinecode/canvi/blob/master/LICENSE.txt
-* Pro notice - Theme Grill Demo Importer Plugin - GPL License
 
 == Screenshot Images [CCO License] ==
+Image for theme screenshot, Copyright Candace McDaniel
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/teenager-girl-XM66YUQ8TE
+
+Image for theme screenshot, Copyright Christian Mackie
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/hands-camera-49GJJ9QOHM
+
+Image for theme screenshot, Copyright Matt Bango
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/woman-hat-BFNYMZK4VP
+
 Image for theme screenshot, Copyright Bruce Mars
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/man-celebrating-RMOCSAQNUG
+Source: https://stocksnap.io/photo/woman-hat-BFNYMZK4VP
 
-Image for theme screenshot, Copyright Camila Cordeiro
+Image for theme screenshot, Copyright Burst
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/girl-woman-EPDJ57Y4TC
-
-Image for theme screenshot, Copyright Brooke Cagle
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/white-wall-U2CLPC1BKA
-
-Image for theme screenshot, Copyright Pxhere
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pxhere.com/en/photo/928515
+Source: https://stocksnap.io/photo/woman-looking-GMAVOEQH7V
 
 * Sidbear icons for the customizer are self created and license under GPL.
