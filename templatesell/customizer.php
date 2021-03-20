@@ -34,7 +34,7 @@ if ( !function_exists('peruse_default_theme_options_values') ) :
             'peruse_mobile_menu_option'=> 'menu-text',
 
             /*Colors Options*/
-            'peruse_primary_color'  => '#EF9D87',
+            'peruse_primary_color'  => '#0017ff',
 
             /*Slider Options*/
             'peruse_enable_slider'      => 0,
