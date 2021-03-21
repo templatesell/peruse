@@ -26,8 +26,8 @@ if ( !function_exists('peruse_default_theme_options_values') ) :
             'peruse_header_image_height'=> '100',
 
             /*Header Options*/
-            'peruse_enable_offcanvas'  => 1,
-            'peruse_enable_search'  => 1,
+            'peruse_enable_offcanvas'  => 0,
+            'peruse_enable_search'  => 0,
 
             /*Menu Options*/
             'peruse_mobile_menu_text'  => esc_html__('Menu','peruse'),

@@ -50,6 +50,7 @@ a {
     -o-transition: color 0.2s ease, background-color 0.2s ease;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
+button:focus,
 a:focus {
     color: #4c4f53;
     outline: 2px solid #1e73be !important;
@@ -1129,7 +1130,6 @@ th {
     font-size: 15px;
     font-style: normal;
     text-transform: inherit;
-    background-color: #efefef;
     padding: 14px 15px 14px 30px;
 }
 
