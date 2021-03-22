@@ -40,18 +40,14 @@ if (!class_exists('Peruse_Tabbed')) :
             $post_number = !empty($instance['post-number']) ? $instance['post-number'] : '';
 
             ?>
-            <?php 
-                //$col = ( dynamic_sidebar('sidebar-1') ) ? 'col-sm-12 col-md-12 col-lg-12' : 'col-sm-3 col-md-3 col-lg-3';
-            ?>
             <ul class="tabs-nav">
                 <?php if(!empty($recent_title)){ ?>
-                <li class="tab-active"><i class="fa fa-clock-o"></i><a data-toggle="tab" href="#menu1"><?php esc_html_e($recent_title); ?></a></li>
+                <li class="tab-active"><i class="fa fa-clock-o"></i><a data-toggle="tab" href="#menu1"><?php echo esc_html($recent_title); ?></a></li>
                 <?php } ?>
                 <?php if(!empty($popular_title)){ ?>
-                <li class=""><i class="fa fa-bookmark-o"></i><a data-toggle="tab" href="#home"><?php esc_html_e($popular_title); ?></a></li>
+                <li class=""><i class="fa fa-bookmark-o"></i><a data-toggle="tab" href="#home"><?php echo esc_html($popular_title); ?></a></li>
                 <?php } ?>
             </ul>
-
             <div class="tab-content">
                 <?php if(!empty($popular_title)) { ?>
                     <div id="home" class="active" style="display: block;">
@@ -90,7 +86,7 @@ if (!class_exists('Peruse_Tabbed')) :
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
                                                 <span><?php echo get_the_date(); ?></span>
-                                                <?php prefer_blog_read_time(); ?>
+                                                <?php peruse_read_time(); ?>
                                             </div><!-- .entry-meta -->
                                         </div>
                                     </div>
@@ -138,7 +134,7 @@ if (!class_exists('Peruse_Tabbed')) :
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
                                                 <span><?php echo get_the_date(); ?></span>
-                                                <?php prefer_blog_read_time(); ?>
+                                                <?php peruse_read_time(); ?>
                                             </div><!-- .entry-meta -->
                                         </div>
                                     </div>

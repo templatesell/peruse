@@ -32,7 +32,7 @@ if (!function_exists('peruse_dynamic_css')) :
             a.effect:before,
             .show-more,
             .modern-slider .slide-wrap .more-btn,
-            a.link-format,
+            a.link-format, .comment-form #submit,
             .comment-form #submit:hover, 
             .comment-form #submit:focus,
             .meta_bottom .post-share a:hover,

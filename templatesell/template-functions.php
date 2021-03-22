@@ -35,3 +35,33 @@ function peruse_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'peruse_pingback_header' );
+
+/* Word read count Pagination */
+if (!function_exists('peruse_read_time')) :
+    /**
+     * @param $content
+     *
+     * @return string
+     */
+    function peruse_read_time()
+    {
+        $content = apply_filters('the_content', get_post_field('post_content'));
+        $read_words = 200;
+        $decode_content = html_entity_decode($content);
+        $filter_shortcode = do_shortcode($decode_content);
+        $strip_tags = wp_strip_all_tags($filter_shortcode, true);
+        $count = str_word_count($strip_tags);
+        $word_per_min = (absint($count) / $read_words);
+        $word_per_min = ceil($word_per_min);
+
+        if (absint($word_per_min) > 0) {
+            $word_count_strings = sprintf(_n('%s Min Reading', '%s Min Reading', number_format_i18n($word_per_min), 'peruse'), number_format_i18n($word_per_min));
+            if ('post' == get_post_type()):
+                echo '<span class="min-read">';
+                echo esc_html($word_count_strings);
+                echo '</span>';
+            endif;
+
+        }
+    }
+endif;
