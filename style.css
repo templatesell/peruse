@@ -3659,7 +3659,7 @@ input[type="radio"]:checked:before {
     color: #ffffff;
     background-color: #1f2123;
     border-radius: 0;
-
+    cursor: pointer;
     -webkit-transition: background-color 0.2s ease;
     -moz-transition: background-color 0.2s ease;
     -o-transition: background-color 0.2s ease;
@@ -3672,6 +3672,7 @@ input[type="radio"]:checked:before {
 .comment-form #submit:hover, 
 .comment-form #submit:focus {
     background-color: #0017ff;
+    opacity: 0.8;
 }
 .comment-form #submit:active {
     position: relative;
