@@ -621,6 +621,8 @@ th {
     padding: 3px 0px;
     position: relative;
     border-bottom: 1px solid #fafafa;
+    display: -webkit-box;
+    display: flex;
 }
 .top-bar-area .left-side{
   float: left;
