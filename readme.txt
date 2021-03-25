@@ -30,6 +30,9 @@ Peruse includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.2 - March 25 2021 =
+* Fixed some minor CSS things
+
 = 1.0.1 - March 22 2021 =
 * Fixed keyboard navigation
 
