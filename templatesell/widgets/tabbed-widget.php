@@ -14,6 +14,18 @@ if (!class_exists('Peruse_Tabbed')) :
     class Peruse_Tabbed extends WP_Widget
     {
 
+    	 private function defaults()
+        {
+            $defaults = array(
+                'title' => esc_html__('Recent Post', 'peruse' ),
+                'popular_title'=> esc_html__('Popular', 'peruse' ),
+                'recent_title'=> esc_html__('Recent', 'peruse' ),
+                'post-number' => 4,
+            );
+            return $defaults;
+        }
+
+
         function __construct()
         {
             $opts = array(
@@ -27,6 +39,7 @@ if (!class_exists('Peruse_Tabbed')) :
 
         function widget($args, $instance)
         {
+        	$instance = wp_parse_args((array)$instance, $this->defaults());
             $title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
             echo $args['before_widget'];
 
@@ -36,7 +49,6 @@ if (!class_exists('Peruse_Tabbed')) :
             }
             $popular_title = !empty($instance['popular_title']) ? $instance['popular_title'] : '';
             $recent_title = !empty($instance['recent_title']) ? $instance['recent_title'] : '';
-            $commented_title = !empty($instance['commented_title']) ? $instance['commented_title'] : '';
             $post_number = !empty($instance['post-number']) ? $instance['post-number'] : '';
 
             ?>
@@ -160,7 +172,6 @@ if (!class_exists('Peruse_Tabbed')) :
             $instance['title'] = sanitize_text_field($new_instance['title']);
             $instance['popular_title'] = sanitize_text_field($new_instance['popular_title']);
             $instance['recent_title'] = sanitize_text_field($new_instance['recent_title']);
-            $instance['commented_title'] = sanitize_text_field($new_instance['commented_title']);
             $instance['post-number'] = absint($new_instance['post-number']);
 
             return $instance;
@@ -168,16 +179,12 @@ if (!class_exists('Peruse_Tabbed')) :
 
         function form($instance)
         {
-            // Defaults.
-            $defaults = array(
-                'title' => esc_html__('Recent Post', 'peruse' ),
-                'popular_title'=> esc_html__('Popular', 'peruse' ),
-                'recent_title'=> esc_html__('Recent', 'peruse' ),
-                'commented_title'=> esc_html__('Comment', 'peruse' ),
-                'post-number' => 5,
-            );
             
-            $instance = wp_parse_args((array)$instance, $defaults);
+            $instance  = wp_parse_args( (array )$instance, $this->defaults() );
+            $title  = esc_attr($instance['title']);
+            $popular_title  = esc_attr($instance['popular_title']);
+            $recent_title  = esc_attr($instance['popular_title']);
+            $post_number  = absint($instance['post-number']);
             ?>
             <p>
                 <label
@@ -199,13 +206,6 @@ if (!class_exists('Peruse_Tabbed')) :
                 <input class="widefat" id="<?php echo esc_attr($this->get_field_id('recent_title')); ?>"
                 name="<?php echo esc_attr($this->get_field_name('recent_title')); ?>" type="text"
                 value="<?php echo esc_attr($instance['recent_title']); ?>"/>
-            </p>
-            <p>
-                <label
-                for="<?php echo esc_attr($this->get_field_id('commented_title')); ?>"><?php esc_html_e('Commented Title:', 'peruse'); ?></label>
-                <input class="widefat" id="<?php echo esc_attr($this->get_field_id('commented_title')); ?>"
-                name="<?php echo esc_attr($this->get_field_name('commented_title')); ?>" type="text"
-                value="<?php echo esc_attr($instance['commented_title']); ?>"/>
             </p>
             <p>
                 <label
