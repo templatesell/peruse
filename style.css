@@ -2967,6 +2967,7 @@ a.link-format:hover {
     margin: 0 4px;
     display: inline-block;
     padding: 0 15px;
+    border-radius: 30px;
 }
 
 .pagination a.page-numbers:focus {
@@ -6225,6 +6226,7 @@ a.img-link {
 .slider-below-widget-wrapper .widget.widget_mc4wp_form_widget {
     background: #f4f4f4;
     padding: 40px;
+    border-radius: 5px;
 }
 .slider-below-widget-wrapper .widget .widget-title{
     background:transparent;
@@ -6270,7 +6272,7 @@ background: #fff;
     border-radius: 2px;
     transition: .15s;
     width: 100%; 
-
+    border-radius: 4px 0 0 4px;
 }
 .newsletter-form input[type=submit]{
     background: #000;
@@ -6280,7 +6282,9 @@ background: #fff;
     line-height: 1;
     height: 52px;
     border-radius: 2px;
-    transition: .15s;  
+    margin-left: -2px;
+    transition: .15s; 
+    border-radius: 0 4px 4px 0; 
 }
 .footer-wrap div.mc4wp-form-fields, 
 .sidebar-area div.mc4wp-form-fields{
