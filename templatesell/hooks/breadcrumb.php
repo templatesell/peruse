@@ -23,7 +23,9 @@ if (!function_exists('peruse_breadcrumbs')):
         $breadcrumb_from = $peruse_theme_options['peruse-breadcrumb-selection-option'];        
         if ((function_exists('yoast_breadcrumb')) && ($breadcrumb_from == 'yoast-breadcrumb')) {
             yoast_breadcrumb();
-        } elseif ((function_exists('bcn_display')) && ($breadcrumb_from == 'navxt-breadcrumb')) {
+        }elseif('rankmath' == $breadcrumb_from && (function_exists('rank_math_the_breadcrumbs'))) {
+          rank_math_the_breadcrumbs();
+        }elseif ((function_exists('bcn_display')) && ($breadcrumb_from == 'navxt-breadcrumb')) {
             bcn_display();
         }else{
 
