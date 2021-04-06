@@ -53,7 +53,7 @@ if ( !function_exists('peruse_default_theme_options_values') ) :
             'peruse-pagination-options'=> 'numeric',
             'peruse-read-more-text'    => '',
             'peruse-blog-exclude-category'=> '',
-            'peruse-show-hide-share'   => 1,
+            'peruse-show-hide-share'   => 0,
             'peruse-show-hide-category'=> 1,
             'peruse-show-hide-date'=> 1,
             'peruse-show-hide-author'=> 1,
@@ -63,7 +63,7 @@ if ( !function_exists('peruse_default_theme_options_values') ) :
             'peruse-single-page-related-posts'  => 1,
             'peruse-single-page-related-posts-title' => esc_html__('You may like','peruse'),
             'peruse-sidebar-single-page'=> 'single-right-sidebar',
-            'peruse-single-social-share' => 1,
+            'peruse-single-social-share' => 0,
             'peruse-single-page-tags-option'=>0,
 
             /*Sticky Sidebar*/

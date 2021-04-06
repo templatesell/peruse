@@ -23,12 +23,12 @@ if (!function_exists('peruse_social_sharing')) :
         ?>
         <div class="meta_bottom">
             <div class="post-share">
-                <a data-tooltip="<?php esc_attr_e('Share it','peruse'); ?>" class="tooltip"  target="_blank" href="<?php echo $peruse_facebook_sharing_url; ?>"><i class="fa fa-facebook"></i><?php esc_html_e('Facebook','peruse'); ?></a>
-                <a data-tooltip="<?php esc_attr_e('Tweet it','peruse'); ?>" class="tooltip"  target="_blank" href="<?php echo $peruse_twitter_sharing_url; ?>"><i
+                <a data-tooltip="<?php esc_attr_e('Share it','peruse'); ?>" class="ts-share"  target="_blank" href="<?php echo $peruse_facebook_sharing_url; ?>"><i class="fa fa-facebook"></i><?php esc_html_e('Facebook','peruse'); ?></a>
+                <a data-tooltip="<?php esc_attr_e('Tweet it','peruse'); ?>" class="ts-share"  target="_blank" href="<?php echo $peruse_twitter_sharing_url; ?>"><i
                             class="fa fa-twitter"></i> <?php esc_html_e('Twitter','peruse'); ?></a>
-                <a data-tooltip="<?php esc_attr_e('Pin it','peruse'); ?>" class="tooltip"  target="_blank" href="<?php echo $peruse_pinterest_sharing_url; ?>"><i
+                <a data-tooltip="<?php esc_attr_e('Pin it','peruse'); ?>" class="ts-share"  target="_blank" href="<?php echo $peruse_pinterest_sharing_url; ?>"><i
                             class="fa fa-pinterest"></i><?php esc_html_e('Pinterest','peruse'); ?></a>
-                <a data-tooltip="<?php esc_attr_e('Share Now','peruse'); ?>" class="tooltip"  target="_blank" href="<?php echo $peruse_linkedin_sharing_url; ?>"><i class="fa fa-linkedin"></i><?php esc_html_e('Linkedin','peruse'); ?></a>
+                <a data-tooltip="<?php esc_attr_e('Share Now','peruse'); ?>" class="ts-share"  target="_blank" href="<?php echo $peruse_linkedin_sharing_url; ?>"><i class="fa fa-linkedin"></i><?php esc_html_e('Linkedin','peruse'); ?></a>
             </div>
         </div>
         <?php

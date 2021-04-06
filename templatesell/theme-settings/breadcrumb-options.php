@@ -40,7 +40,7 @@ $wp_customize->add_control('peruse_options[peruse-breadcrumb-selection-option]',
     'choices' => array(
         'theme-breadcrumb' => __('Theme Breadcrumb', 'peruse'),
         'yoast-breadcrumb' => __('Yoast SEO Breadcrumb', 'peruse'),
-        'rankmath' => __('Rank Math Plugin', 'polite'),
+        'rankmath' => __('Rank Math Plugin', 'peruse'),
         'navxt-breadcrumb' => __('NavXT Breadcrumb', 'peruse'),    
     ),
     'label' => __('Select the Breadcrumb', 'peruse'),

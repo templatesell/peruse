@@ -30,6 +30,9 @@ Peruse includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.5 - April 06 2021 =
+* Fixed Social share issue
+
 = 1.0.4 - March 27 2021 =
 * Breadcrumb support for Rank Math plugin added
 
