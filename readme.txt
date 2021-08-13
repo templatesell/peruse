@@ -30,6 +30,10 @@ Peruse includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.6 - August 13 2021 =
+* Checked with WP 5.8
+* Disable new widget screen
+
 = 1.0.5 - April 06 2021 =
 * Fixed Social share issue
 
