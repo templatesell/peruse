@@ -16,6 +16,9 @@ if ( ! function_exists( 'peruse_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function peruse_setup() {
+
+		//load customizer setting
+		$GLOBALS['peruse_theme_options'] = peruse_get_options_value();
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -145,12 +148,6 @@ if ( ! function_exists( 'peruse_setup' ) ) :
 
         // Add support for Yoast SEO Breadcrumbs.
         add_theme_support( 'yoast-seo-breadcrumbs' );
-
-        /**
-        * Disable new widget screen
-        * @link https://developer.wordpress.org/block-editor/how-to-guides/widgets/overview/
-        */
-		remove_theme_support( 'widgets-block-editor' ); 
 	}
 endif;
 add_action( 'after_setup_theme', 'peruse_setup' );

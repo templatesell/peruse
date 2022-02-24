@@ -8,10 +8,9 @@
  *
  * @package Peruse
  */
-$GLOBALS['peruse_theme_options'] = peruse_get_options_value();
 global $peruse_theme_options;
 $enable_slider = absint($peruse_theme_options['peruse_enable_slider']);
-$enable_box = $peruse_theme_options['peruse_enable_promo'];
+$enable_box = absint($peruse_theme_options['peruse_enable_promo']);
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

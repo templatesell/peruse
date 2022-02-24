@@ -9,12 +9,8 @@
  */
 global $peruse_theme_options;
 $promo_cat = absint($peruse_theme_options['peruse-promo-select-category']);
-
-if( $promo_cat > 0 && is_home() )
-{ ?>
+?>
     <section class="peruse-promo-section">
-        <?php if ( is_front_page() && is_home() )
-        {  ?>
             <div class="container">
                 <div class="promo-section promo-three">
                     <?php
@@ -71,6 +67,4 @@ if( $promo_cat > 0 && is_home() )
                         <?php endwhile; endif; wp_reset_postdata(); ?>
                 </div>
             </div>
-        <?php } ?>
     </section>
-<?php   }

@@ -70,7 +70,7 @@ if ( !function_exists('peruse_default_theme_options_values') ) :
             'peruse-enable-sticky-sidebar' => 0,
 
             /*Footer Section*/
-            'peruse-footer-copyright'  => esc_html__('&#169; All Rights Reserved 2021','peruse'),
+            'peruse-footer-copyright'  => esc_html__('&#169; All Rights Reserved 2022','peruse'),
 
             /*Breadcrumb Options*/
             'peruse-extra-breadcrumb' => 1,
