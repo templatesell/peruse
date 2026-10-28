@@ -26,11 +26,6 @@ if ( ! function_exists( 'peruse_posted_on' ) ) :
 	$posted_on = 
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-	/*
-	 * A duplicate of peruse_posted_by()'s byline used to be built here and
-	 * discarded, which also put a second "By %s" into the translation
-	 * template differing from the one in use only by its first letter.
-	 */
 	echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 endif;

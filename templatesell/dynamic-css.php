@@ -30,15 +30,7 @@ if (!function_exists('peruse_dynamic_css')) :
 
         $custom_css = '';
 
-        /*
-         * Every accent-coloured surface in the stylesheet, repainted from one
-         * generated map. The three hand-written blocks this replaced named 60
-         * of the 138 selectors that use the default accent, so more than half
-         * the theme stayed #0017ff whatever the user chose - blockquote marks,
-         * every comment link hover and focus, checked radios and checkboxes,
-         * pagination hovers, the 404 page's links, widget titles, and the
-         * whole text-widget form.
-         */
+        // Repaint accent surfaces from the generated selector map.
         if ( null !== $peruse_primary_color ) {
             foreach ( peruse_accent_selectors() as $peruse_property => $peruse_list ) {
                 $custom_css .= sprintf(

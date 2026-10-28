@@ -6,11 +6,7 @@ function peruse_scripts() {
 
 	global $peruse_theme_options;
 
-	/*
-	 * Josefin Sans sets the body, Mulish the headings, Lora the search field
-	 * and pullquotes, Playfair Display the blockquotes, and Monsieur La
-	 * Doulaise the author signature. All five are served from the theme.
-	 */
+	// Locally hosted webfonts.
 	wp_enqueue_style( 'peruse-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), PERUSE_VERSION );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0' );
@@ -88,10 +84,7 @@ add_action( 'wp_enqueue_scripts', 'peruse_scripts' );
 /**
  * Editor styles.
  *
- * Registered with add_editor_style() rather than enqueue_block_editor_assets:
- * since WordPress 6.3 the post editor renders content in an iframe, and a
- * stylesheet enqueued for the editor chrome never reaches a single block
- * inside it.
+ * Uses add_editor_style() so the styles reach the editor iframe.
  */
 function peruse_editor_styles() {
 	add_editor_style( array( 'assets/fonts/fonts.css', 'css/editor-styles.css' ) );

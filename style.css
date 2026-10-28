@@ -7725,13 +7725,10 @@ display: inline-block;
 
 
 /* ==========================================================================
-   Peruse 1.0.8 - focus, reduced motion, and the theme's block styles
+   Focus, reduced motion and block styles
    ========================================================================== */
 
-/*
- * Keyboard focus had no styling of its own, so it fell to whatever the browser
- * drew - and several controls suppressed even that.
- */
+/* Keyboard focus */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -7773,7 +7770,7 @@ textarea:focus:not(:focus-visible),
     }
 }
 
-/* ------------------------------------------------- the theme's block styles */
+/* Block styles */
 
 .is-style-peruse-lead {
     font-size: 20px;

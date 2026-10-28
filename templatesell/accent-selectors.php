@@ -7,15 +7,8 @@
 
 if ( ! function_exists( 'peruse_accent_selectors' ) ) :
 	/**
-	 * Every selector in the stylesheet that paints with the accent colour,
-	 * grouped by the property it paints with.
-	 *
-	 * Generated from style.css rather than maintained by hand. The list this
-	 * replaced covered 60 of the 138 selectors that use the default accent, so
-	 * changing the Primary Color left blockquote marks, comment link hovers,
-	 * checked radios and checkboxes, pagination hovers, 404 links, widget
-	 * titles and the whole text-widget form at #0017ff whatever the user
-	 * picked.
+	 * Selectors that use the accent colour, grouped by CSS property.
+	 * Generated from style.css.
 	 *
 	 * @return array Property name => list of selectors.
 	 */

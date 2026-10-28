@@ -356,7 +356,7 @@ endif;
 add_action( 'admin_enqueue_scripts', 'peruse_widgets_backend_enqueue' );
 
 /**
- * Load the widget form's media picker where widget forms actually appear.
+ * Load the media picker on widget screens.
  *
  * @param string $hook_suffix Current admin page.
  * @return void

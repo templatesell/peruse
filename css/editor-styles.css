@@ -1,14 +1,4 @@
-/*
- * Editor styles.
- *
- * This file used to be 47 bytes: a single rule setting a maximum width. It
- * carried no typography, no colours and no block styling, and it was loaded
- * through enqueue_block_editor_assets, which since WordPress 6.3 does not
- * reach the content at all - the post editor renders it in an iframe. So
- * writing a post looked nothing like reading one.
- *
- * These are the front end's own values.
- */
+/* Editor styles. */
 
 .wp-block {
 	max-width: 780px;
@@ -68,7 +58,7 @@
 	color: #0017ff;
 }
 
-/* The front end sets blockquotes in Playfair Display, with a large opening mark. */
+/* Blockquotes */
 .editor-styles-wrapper blockquote {
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
@@ -112,7 +102,7 @@
 	background-color: #e6e6e6;
 }
 
-/* The theme's own block styles, so they preview as they will publish. */
+/* Theme block styles */
 
 .editor-styles-wrapper .is-style-peruse-lead {
 	font-size: 20px;

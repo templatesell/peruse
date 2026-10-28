@@ -2,13 +2,6 @@
 /**
  * Block styles and block patterns.
  *
- * The theme's tag list has advertised block-patterns and block-styles since it
- * shipped, and Theme Check reported neither was implemented.
- *
- * Both are registered on init rather than at file scope: registering earlier
- * calls the translation functions before the text domain is loaded, which
- * WordPress 6.7 and later reports as a _load_textdomain_just_in_time notice.
- *
  * @package Peruse
  */
 

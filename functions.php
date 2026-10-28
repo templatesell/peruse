@@ -8,7 +8,7 @@
  */
 
 if ( ! defined( 'PERUSE_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
+	// Theme version.
 	define( 'PERUSE_VERSION', '1.0.8' );
 }
 
@@ -94,12 +94,6 @@ if ( ! function_exists( 'peruse_setup' ) ) :
 			)
 		);
 
-		/*
-		 * The tag list has advertised custom-background and wide-blocks since
-		 * the theme shipped, and neither was ever declared, so Background
-		 * Image never appeared in the customizer and wide alignment was
-		 * unavailable in the editor.
-		 */
 		add_theme_support(
 			'custom-background',
 			apply_filters(

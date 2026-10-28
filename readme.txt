@@ -33,35 +33,27 @@ Peruse includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 = 1.0.8 - August 24 2026 =
-
-Fixed
-* Changing the Primary Color left more than half the theme behind. The stylesheet paints 138 selectors with the default accent and the dynamic CSS named 60 of them, so blockquote marks, every comment link hover and focus, checked radio buttons and checkboxes, pagination hovers, the 404 page's links, widget titles and the whole text-widget form stayed #0017ff whatever the user picked. The selector list is generated from the stylesheet now and covers all 138
-* One of the selectors in that list was written "aarticle.format-status", which is not a valid selector, so that post format's badge was never recoloured either
-* The Primary Color is run through sanitize_hex_color() rather than esc_attr(). esc_attr() escapes for an HTML attribute, and this value goes into a stylesheet - a stored value of "red; }" would have closed the rule and kept going
-* The stylesheet names five font families and the theme loaded three. Lora, used for the search field and pullquotes, and Playfair Display, used for every blockquote and its opening mark, were never requested at all, so those elements rendered in a generic serif rather than the faces they were designed in
-* The body font was requested from Google as "Muli", the name retired when the family became Mulish
-* The main stylesheet was enqueued with no version argument, so WordPress fell back to its own version number: style.css was cache-busted by WordPress releases rather than by theme releases
-* Four scripts call jQuery and declared no dependency on it. They worked only because the slider happens to pull jQuery in on every page
-* The widget script was registered with true as its fourth argument. That argument is the version, not the in-footer flag, so the version became "1" and the script loaded in the header
-* Post dates, the read-more link, category lines and both post navigations were #989ea6 - 2.70:1 against white, well under the readable minimum. The slider dots measured 2.95:1 and the slider arrows 1.67:1
-* Keyboard focus had no styling of its own
-* The text domain was loaded without being told where the language files are
-* A find-and-replace had turned the word "Public" into "Peruse" in three license notices, including the License header in style.css and readme.txt - which read "GNU General Peruse License v2 or later" - and inside the GPL notice of a bundled third-party library
-
-Performance
-* Fonts are served from the theme instead of Google. Three requests went out on every page view, over protocol-relative URLs with no version
-* wp_enqueue_media() ran on every screen in the admin. The callback took no hook argument and checked nothing, so the whole media library bundle loaded whether or not a widget form was on the page
-* Removed 132 KB of bundled files nothing referenced: both copies of iScroll, the minified twins of the off-canvas menu's CSS and JS, and an unused grid stylesheet
-* Every stylesheet and script is versioned from the theme version or the library's own. Font Awesome was labelled 4.5.0 and is 4.7.0; Bootstrap was labelled 4.5.0 and is 4.0.0; Slick, Canvi and Theia Sticky Sidebar were given "4.5.0", "4.6.0" and "20200412", none of which are versions of them
-
-Editor
-* Added editor styles. css/editor-styles.css was 47 bytes - one rule setting a maximum width, with no typography, no colours and no block styling - and it was loaded through enqueue_block_editor_assets, which no longer reaches the content now that the editor renders it in an iframe. So writing a post looked nothing like reading one
-* Added three block styles - Lead paragraph, Boxed and Plain - and three block patterns. The tag list has advertised block-patterns and block-styles since the theme shipped and neither was implemented
-* Declared support for a custom background and for wide alignment, both of which the tags have also advertised since the theme shipped
-
-Other
-* Corrected the readme: the stable tag said 1.0.0 where the theme was on 1.0.7, the PHP requirement said 5.2, and a missing comma had run "full-width-template" and "threaded-comments" together into one invalid tag
-* Added languages/peruse.pot
+* Fixed: Primary Color now applies to all accent selectors.
+* Fixed: invalid selector for the status post format badge.
+* Fixed: Primary Color is sanitized with sanitize_hex_color().
+* Fixed: Lora and Playfair Display fonts were never loaded.
+* Fixed: body font name Muli changed to Mulish.
+* Fixed: main stylesheet now versioned with the theme version.
+* Fixed: jQuery dependency added to scripts that use it.
+* Fixed: widget script version and footer arguments.
+* Fixed: low contrast on post meta, navigation and slider controls.
+* Fixed: keyboard focus styles.
+* Fixed: language files path for the text domain.
+* Fixed: "Public" wrongly replaced with "Peruse" in license notices.
+* Changed: fonts are now served from the theme instead of Google.
+* Changed: media library only loads on widget screens.
+* Changed: removed unused iScroll, grid CSS and minified duplicates.
+* Changed: bundled libraries use their own version numbers.
+* Added: editor styles.
+* Added: three block styles and three block patterns.
+* Added: support for custom background and wide alignment.
+* Added: languages/peruse.pot.
+* Changed: readme stable tag, PHP requirement and tags corrected.
 * Tested up to WordPress 7.1
 
 = 1.0.7 - February 24 2022 =
