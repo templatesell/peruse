@@ -353,11 +353,20 @@ if (!class_exists('Peruse_Author_Widget')) :
     }
 
 endif;
-add_action('admin_enqueue_scripts', 'peruse_widgets_backend_enqueue');
-function peruse_widgets_backend_enqueue()
-{
-    wp_register_script('peruse-custom-widgets', get_template_directory_uri() . '/assets/js/widgets.js', array('jquery'), true);
-    
+add_action( 'admin_enqueue_scripts', 'peruse_widgets_backend_enqueue' );
+
+/**
+ * Load the widget form's media picker where widget forms actually appear.
+ *
+ * @param string $hook_suffix Current admin page.
+ * @return void
+ */
+function peruse_widgets_backend_enqueue( $hook_suffix = '' ) {
+
+    if ( ! in_array( $hook_suffix, array( 'widgets.php', 'customize.php' ), true ) ) {
+        return;
+    }
+
     wp_enqueue_media();
-    wp_enqueue_script('peruse-custom-widgets');
+    wp_enqueue_script( 'peruse-custom-widgets', get_template_directory_uri() . '/assets/js/widgets.js', array( 'jquery' ), PERUSE_VERSION, true );
 }

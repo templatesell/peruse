@@ -1,5 +1,5 @@
 body{
-    font-family: 'Muli', sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
@@ -1994,7 +1994,7 @@ section.slider-wrapper{
 .modern-slider .slide-wrap .caption span, .modern-slider .slide-wrap .caption span a{
     margin-bottom: 15px;
     font-size: 12px;
-    color: #989ea6;
+    color: #6c737b;
     letter-spacing: normal;
 }
 
@@ -2507,8 +2507,8 @@ article.format-status .post-content .post-format::after{
     font-size: 24px;
     height: 50px;
     width: 40px;
-    border: 1px solid #c7c8ca;
-    color: #c7c8ca;
+    border: 1px solid #767d86;
+    color: #767d86;
     text-align: center;
     line-height: 50px;
     transition: all .3s;
@@ -2517,8 +2517,8 @@ article.format-status .post-content .post-format::after{
 }
 
 .blog-gallery .slick-arrow:hover{
-    border: 1px solid #c7c8ca;
-    color: #c7c8ca;
+    border: 1px solid #767d86;
+    color: #767d86;
 }
 
 .blog-gallery .slick-arrow.slick-next{
@@ -2552,7 +2552,7 @@ article.format-status .post-content .post-format::after{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #959698;
+    background: #767d86;
 }
 
 video{
@@ -2602,11 +2602,11 @@ embed, iframe, object{
     font-size: 14px;
     font-style: normal;
     text-transform: capitalize;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .post-date a{
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .post-date a:focus, .post-date a:hover{
@@ -2691,7 +2691,7 @@ embed, iframe, object{
 
 .more-link{
     font-style: normal;
-    color: #989ea6;
+    color: #6c737b;
     padding: 0;
     font-size: 14px;
     display: inline-block;
@@ -2766,7 +2766,7 @@ a.effect:hover, a.effect:active{
 .post-cats{
     display: block;
     font-size: 14px;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .post-cats > span{
@@ -3085,7 +3085,7 @@ a.link-format:hover{
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #989ea6;
+    color: #6c737b;
     display: block;
     padding-right: 10px;
     top: 0;
@@ -3095,7 +3095,7 @@ a.link-format:hover{
     position: absolute;
     content: "\f0d9";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     right: 0;
     top: -3px;
 }
@@ -3106,7 +3106,7 @@ a.link-format:hover{
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #989ea6;
+    color: #6c737b;
     display: block;
     padding-left: 10px;
     top: 0;
@@ -3117,7 +3117,7 @@ a.link-format:hover{
     position: absolute;
     content: "\f0da";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     left: 0;
     top: -3px;
 }
@@ -3217,7 +3217,7 @@ a.link-format:hover{
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #989ea6;
+    color: #6c737b;
     display: block;
     padding-right: 10px;
     top: 0;
@@ -3227,7 +3227,7 @@ a.link-format:hover{
     position: absolute;
     content: "\f0d9";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     right: 0;
     top: -3px;
 }
@@ -3238,7 +3238,7 @@ a.link-format:hover{
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #989ea6;
+    color: #6c737b;
     display: block;
     padding-left: 10px;
     top: 0;
@@ -3249,7 +3249,7 @@ a.link-format:hover{
     position: absolute;
     content: "\f0da";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     left: 0;
     top: -3px;
 }
@@ -3535,7 +3535,7 @@ input[type="radio"]:checked:before{
     display: block;
     margin-top: 5px;
     font-size: 12px;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .about-author-name .about-author-posts-num i{
@@ -3558,7 +3558,7 @@ input[type="radio"]:checked:before{
     font-style: normal;
     font-weight: 600;
     line-height: 1.3;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .about-author-posts-link i{
@@ -3755,7 +3755,7 @@ input[type="radio"]:checked:before{
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-reply-title #cancel-comment-reply-link:before{
@@ -3811,7 +3811,7 @@ input[type="radio"]:checked:before{
     font-style: normal;
     font-weight: 600;
     line-height: 1.3;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-list .pingback .comment-body:before{
@@ -3864,7 +3864,7 @@ input[type="radio"]:checked:before{
 }
 
 .comment-list .pingback .comment-body .edit-link .comment-edit-link{
-    color: #989ea6;
+    color: #6c737b;
     text-decoration: none !important;
 }
 
@@ -3923,11 +3923,11 @@ input[type="radio"]:checked:before{
     font-style: normal;
     font-weight: 600;
     line-height: 1.3;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-meta .comment-metadata a{
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-meta .comment-metadata a:hover, .comment-meta .comment-metadata a:focus{
@@ -3981,11 +3981,11 @@ input[type="radio"]:checked:before{
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-body .reply .comment-reply-link:focus{
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-body .reply .comment-reply-link:hover{
@@ -4069,7 +4069,7 @@ input[type="radio"]:checked:before{
     font-weight: 600;
     text-transform: uppercase;
     word-wrap: break-word;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .comment-navigation .nav-links a:hover, .comment-navigation .nav-links a:focus{
@@ -4168,7 +4168,7 @@ input[type="radio"]:checked:before{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #959698;
+    background: #767d86;
 }
 
 .related-posts{
@@ -4511,7 +4511,7 @@ article.masonry-post{
 }
 
 .widget_archive ul li{
-    color: #989ea6;
+    color: #6c737b;
     margin-bottom: 10px;
 }
 
@@ -4544,7 +4544,7 @@ article.masonry-post{
 }
 
 .widget_pages ul li{
-    color: #989ea6;
+    color: #6c737b;
     margin-bottom: 10px;
 }
 
@@ -4569,7 +4569,7 @@ article.masonry-post{
 }
 
 .widget_categories ul li{
-    color: #989ea6;
+    color: #6c737b;
     margin-bottom: 10px;
     display: table;
     text-align: left;
@@ -4627,7 +4627,7 @@ article.masonry-post{
 .widget_recent_entries ul li .post-date{
     display: block;
     font-size: 80%;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .widget_tag_cloud .tagcloud{
@@ -5056,7 +5056,7 @@ article.masonry-post{
 .widget_rss ul li .rss-date{
     display: block;
     font-size: 80%;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .widget_rss ul li .rssSummary{
@@ -5070,7 +5070,7 @@ article.masonry-post{
     text-align: right;
     font-style: normal;
     font-size: 80%;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .widget_media_image .wp-caption{
@@ -5385,7 +5385,7 @@ ul.social-menu li a[href*="dribble.com"]:before{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #959698;
+    background: #767d86;
 }
 
 .author-wrapper{
@@ -5522,7 +5522,7 @@ ul.social-menu li a[href*="dribble.com"]:before{
 }
 
 .widget_featured_content .post-date a{
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .widget_bg_overlay{
@@ -6295,7 +6295,7 @@ div.mc4wp-form-fields{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #959698;
+    background: #767d86;
 }
 
 .search.search-results .posts-container, .search.search-no-results .posts-container{
@@ -6767,7 +6767,7 @@ div.mc4wp-form-fields{
     display: block;
     font-size: 12px;
     line-height: 1.7;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .post-excerpt .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p{
@@ -6814,7 +6814,7 @@ div.mc4wp-form-fields{
     display: block;
     font-size: 12px;
     line-height: 1.7;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .post-excerpt .wp-block-latest-posts.is-grid{
@@ -6891,7 +6891,7 @@ div.mc4wp-form-fields{
     display: block;
     font-size: 12px;
     line-height: 1.7;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 .post-excerpt .wp-block-rss .wp-block-rss__item-excerpt{
@@ -6932,22 +6932,22 @@ div.mc4wp-form-fields{
 }
 
 .post-excerpt .wp-block-search .wp-block-search__input::-webkit-input-placeholder{
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 
 .post-excerpt .wp-block-search .wp-block-search__input:-moz-placeholder{
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 
 .post-excerpt .wp-block-search .wp-block-search__input::-moz-placeholder{
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 
 .post-excerpt .wp-block-search .wp-block-search__input:-ms-input-placeholder{
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 

@@ -4,34 +4,31 @@
  */
 function peruse_scripts() {
 
-	/*google font  */
 	global $peruse_theme_options;
-    /*body  */
-    wp_enqueue_style('peruse-body', '//fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&display=swap', array(), null);
-    /*heading  */
-    wp_enqueue_style('peruse-heading', '//fonts.googleapis.com/css?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap', array(), null);
-    /*Author signature google font  */
-    wp_enqueue_style('peruse-sign', '//fonts.googleapis.com/css?family=Monsieur+La+Doulaise&display=swap', array(), null);
-    
-	//*Font-Awesome-master*/
-    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.5.0' );
 
-    wp_enqueue_style( 'grid-css', get_template_directory_uri() . '/css/bootstrap.css', array(), '4.5.0' );
-    
-    /*Slick CSS*/
-    wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '4.5.0' );
-	
-    /*mmenu CSS*/
-    wp_enqueue_style( 'offcanvas-style', get_template_directory_uri() . '/assets/css/canvi.css', array(), '4.5.0' );
+	/*
+	 * Josefin Sans sets the body, Mulish the headings, Lora the search field
+	 * and pullquotes, Playfair Display the blockquotes, and Monsieur La
+	 * Doulaise the author signature. All five are served from the theme.
+	 */
+	wp_enqueue_style( 'peruse-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), PERUSE_VERSION );
+
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0' );
+
+	wp_enqueue_style( 'grid-css', get_template_directory_uri() . '/css/bootstrap.css', array(), '4.0.0' );
+
+	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '1.8.0' );
+
+	wp_enqueue_style( 'offcanvas-style', get_template_directory_uri() . '/assets/css/canvi.css', array(), PERUSE_VERSION );
 
 	$masonry =  esc_attr($peruse_theme_options['peruse-column-blog-page']);
     if( 'masonry-post' == $masonry )  {
     	wp_enqueue_script( 'masonry' );
-    	wp_enqueue_script( 'peruse-custom-masonry', get_template_directory_uri() . '/assets/js/custom-masonry.js', array('jquery'), '4.6.0' );
+    	wp_enqueue_script( 'peruse-custom-masonry', get_template_directory_uri() . '/assets/js/custom-masonry.js', array( 'jquery', 'masonry' ), PERUSE_VERSION, true );
    }
 
    /*Main CSS*/
-    wp_enqueue_style( 'peruse-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'peruse-style', get_stylesheet_uri(), array( 'grid-css' ), PERUSE_VERSION );
 
 	/*RTL CSS*/
 	wp_style_add_data( 'peruse-style', 'rtl', 'replace' );
@@ -40,26 +37,26 @@ function peruse_scripts() {
     
     if( 'ajax' == $peruse_pagination_option )  {
     	
-    	wp_enqueue_script( 'peruse-custom-pagination', get_template_directory_uri() . '/assets/js/custom-infinte-pagination.js', array('jquery'), '4.6.0' );
+    	wp_enqueue_script( 'peruse-custom-pagination', get_template_directory_uri() . '/assets/js/custom-infinte-pagination.js', array( 'jquery' ), PERUSE_VERSION, true );
     }
 
-	wp_enqueue_script( 'peruse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20200412', true );
+	wp_enqueue_script( 'peruse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), PERUSE_VERSION, true );
 
 	/*Slick JS*/
-    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array('jquery'), '4.6.0' );
+    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array( 'jquery' ), '1.8.0', true );
     
     /*mmenu JS*/
     $canvi =  absint($peruse_theme_options['peruse_enable_offcanvas']);
     if( 1  == $canvi )  {
-        wp_enqueue_script( 'offcanvas-script', get_template_directory_uri() . '/assets/js/canvi.js', array('jquery'), '4.6.0' );
-        wp_enqueue_script( 'offcanvas-custom', get_template_directory_uri() . '/assets/js/canvi-custom.js', array('jquery'), '4.6.0' );
+        wp_enqueue_script( 'offcanvas-script', get_template_directory_uri() . '/assets/js/canvi.js', array( 'jquery' ), PERUSE_VERSION, true );
+        wp_enqueue_script( 'offcanvas-custom', get_template_directory_uri() . '/assets/js/canvi-custom.js', array( 'jquery', 'offcanvas-script' ), PERUSE_VERSION, true );
     }
     
     /*Custom Script JS*/
-	wp_enqueue_script( 'peruse-script', get_template_directory_uri() . '/assets/js/script.js', array(), '20200412', true );
+	wp_enqueue_script( 'peruse-script', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), PERUSE_VERSION, true );
     
 	/*Custom Scripts*/
-	wp_enqueue_script( 'peruse-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), '20200412', true );
+	wp_enqueue_script( 'peruse-custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), PERUSE_VERSION, true );
     
 	global $wp_query;
     $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
@@ -74,13 +71,13 @@ function peruse_scripts() {
         'no_more_posts'        => __( 'No More', 'peruse' ),
     ));
 
-	wp_enqueue_script( 'peruse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20200412', true );
+	wp_enqueue_script( 'peruse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), PERUSE_VERSION, true );
 
 	/*Sticky Sidebar*/
 	global $peruse_theme_options;
 	if( 1 == absint($peruse_theme_options['peruse-enable-sticky-sidebar'])) {
-		wp_enqueue_script( 'theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/theia-sticky-sidebar.js', array(), '20200412', true );
-        wp_enqueue_script( 'peruse-sticky-sidebar', get_template_directory_uri() . '/assets/js/custom-sticky-sidebar.js', array(), '20200412', true );
+		wp_enqueue_script( 'theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/theia-sticky-sidebar.js', array( 'jquery' ), '1.4.0', true );
+        wp_enqueue_script( 'peruse-sticky-sidebar', get_template_directory_uri() . '/assets/js/custom-sticky-sidebar.js', array( 'jquery', 'theia-sticky-sidebar' ), PERUSE_VERSION, true );
 	}
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script('comment-reply');
@@ -89,30 +86,15 @@ function peruse_scripts() {
 add_action( 'wp_enqueue_scripts', 'peruse_scripts' );
 
 /**
- * Enqueue fonts for the editor style
+ * Editor styles.
+ *
+ * Registered with add_editor_style() rather than enqueue_block_editor_assets:
+ * since WordPress 6.3 the post editor renders content in an iframe, and a
+ * stylesheet enqueued for the editor chrome never reaches a single block
+ * inside it.
  */
-function peruse_block_styles() {
-    wp_enqueue_style( 'peruse-editor-styles', get_theme_file_uri( 'css/editor-styles.css' ) );
-
-    wp_enqueue_style('peruse-editor-body', '//fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&display=swap', array(), null);
-    /*heading  */
-    wp_enqueue_style('peruse-editor-heading', '//fonts.googleapis.com/css?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap', array(), null);
-
-    $peruse_custom_css = '
-    .edit-post-visual-editor.editor-styles-wrapper{ font-family: Muli;}
-
-    .editor-post-title__block .editor-post-title__input,
-    .editor-styles-wrapper h1,
-    .editor-styles-wrapper h2,
-    .editor-styles-wrapper h3,
-    .editor-styles-wrapper h4,
-    .editor-styles-wrapper h5,
-    .editor-styles-wrapper h6{
-        font-family: Josefin Sans;
-    }';
-
-    wp_add_inline_style( 'peruse-editor-styles', $peruse_custom_css );
+function peruse_editor_styles() {
+	add_editor_style( array( 'assets/fonts/fonts.css', 'css/editor-styles.css' ) );
 }
-
-add_action( 'enqueue_block_editor_assets', 'peruse_block_styles' );
+add_action( 'after_setup_theme', 'peruse_editor_styles' );
 

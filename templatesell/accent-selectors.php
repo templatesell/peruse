@@ -1,0 +1,184 @@
+<?php
+/**
+ * Accent colour selector map.
+ *
+ * @package peruse
+ */
+
+if ( ! function_exists( 'peruse_accent_selectors' ) ) :
+	/**
+	 * Every selector in the stylesheet that paints with the accent colour,
+	 * grouped by the property it paints with.
+	 *
+	 * Generated from style.css rather than maintained by hand. The list this
+	 * replaced covered 60 of the 138 selectors that use the default accent, so
+	 * changing the Primary Color left blockquote marks, comment link hovers,
+	 * checked radios and checkboxes, pagination hovers, 404 links, widget
+	 * titles and the whole text-widget form at #0017ff whatever the user
+	 * picked.
+	 *
+	 * @return array Property name => list of selectors.
+	 */
+	function peruse_accent_selectors() {
+
+		$selectors = array(
+
+			'background-color' => array(
+				'.modern-slider .slick-dots li.slick-active button',
+				'article.format-aside .post-content .post-format::after',
+				'article.format-status .post-content .post-format::after',
+				'article.format-chat .post-content .post-format::after',
+				'article.format-link .post-content .post-format::after',
+				'article.format-standard .post-content .post-format::after',
+				'article.format-image .post-content .post-format::after',
+				'article.hentry.sticky .post-content .post-format::after',
+				'article.format-video .post-content .post-format::after',
+				'article.format-gallery .post-content .post-format::after',
+				'article.format-audio .post-content .post-format::after',
+				'article.format-quote .post-content .post-format::after',
+				'a.link-format',
+				'.format-quote .post-wrap',
+				'.show-more',
+				'input[type="checkbox"]:checked',
+				'input[type="radio"]:checked',
+				'.comment-form #submit:hover',
+				'.comment-form #submit:focus',
+				'.textwidget button:hover',
+				'.textwidget input[type="button"]:hover',
+				'.textwidget input[type="reset"]:hover',
+				'.textwidget input[type="submit"]:hover',
+				'.post-slider-section .s-cat',
+				'.tabs-nav li:before',
+				'.footer-wrap .widget-title:after',
+				'#toTop',
+				'.slider-below-widget-wrapper',
+				'.post-excerpt .wp-block-file .wp-block-file__button:active',
+				'.post-excerpt .wp-block-file .wp-block-file__button:focus',
+				'.post-excerpt .wp-block-file .wp-block-file__button:hover',
+				'.post-excerpt .wp-block-file .wp-block-file__button:visited',
+				'.cart-inner',
+			),
+
+			'border-bottom-color' => array(
+				'.textwidget input[type="text"]:hover',
+				'.textwidget input[type="email"]:hover',
+				'.textwidget input[type="url"]:hover',
+				'.textwidget input[type="password"]:hover',
+				'.textwidget input[type="search"]:hover',
+				'.textwidget input[type="tel"]:hover',
+				'.textwidget input[type="number"]:hover',
+				'.textwidget input[type="date"]:hover',
+				'.textwidget textarea:hover',
+				'.textwidget select:hover',
+				'.textwidget input[type="text"]:focus',
+				'.textwidget input[type="email"]:focus',
+				'.textwidget input[type="url"]:focus',
+				'.textwidget input[type="password"]:focus',
+				'.textwidget input[type="search"]:focus',
+				'.textwidget input[type="tel"]:focus',
+				'.textwidget input[type="number"]:focus',
+				'.textwidget input[type="date"]:focus',
+				'.textwidget textarea:focus',
+				'.textwidget select:active',
+				'.textwidget select:focus',
+			),
+
+			'border-color' => array(
+				'input[type="checkbox"]:hover',
+				'input[type="checkbox"]:focus',
+				'input[type="radio"]:hover',
+				'input[type="checkbox"]:checked',
+				'input[type="radio"]:checked',
+				'#author:hover',
+				'#email:hover',
+				'#url:hover',
+				'#comment:hover',
+				'#author:active',
+				'#email:active',
+				'#url:active',
+				'#comment:active',
+				'#author:focus',
+				'#email:focus',
+				'#url:focus',
+				'#comment:focus',
+				'.textwidget input[type="file"]:hover',
+				'.textwidget input[type="file"]:focus',
+			),
+
+			'border-top-color' => array(
+				'.main-menu.submenu-top-border li > ul',
+			),
+
+			'color' => array(
+				'a:hover',
+				'blockquote:before',
+				'.main-menu ul li.current-menu-item > a',
+				'.main-menu ul li:hover > a',
+				'.post-date a:focus',
+				'.post-date a:hover',
+				'.post-excerpt a:hover',
+				'.post-excerpt a:focus',
+				'.content a:hover',
+				'.content a:focus',
+				'.tags-links a',
+				'.tags-links i',
+				'.post-cats > span i',
+				'.post-cats > span a',
+				'.tags-links a:hover',
+				'.tags-links a:focus',
+				'.post-cats > span a:hover',
+				'.post-cats > span a:focus',
+				'.pagination a.page-numbers:hover',
+				'.posts-navigation .nav-links a:hover',
+				'.posts-navigation .nav-links a:focus',
+				'.post-navigation .nav-links a:hover',
+				'.post-navigation .nav-links a:focus',
+				'.about-author-name a:hover',
+				'.about-author-name a:focus',
+				'.about-author-posts-link:hover',
+				'.about-author-posts-link:focus',
+				'.comment-respond .must-log-in a:hover',
+				'.comment-respond .must-log-in a:focus',
+				'.comment-form .logged-in-as a:last-child:hover',
+				'.comment-form .logged-in-as a:last-child:focus',
+				'.comment-reply-title #cancel-comment-reply-link:hover',
+				'.comment-list .pingback .comment-body > a:hover',
+				'.comment-list .pingback .comment-body > a:focus',
+				'.comment-list .pingback .comment-body .edit-link .comment-edit-link:hover',
+				'.comment-list .pingback .comment-body .edit-link .comment-edit-link:focus',
+				'.comment-meta .comment-author .fn .url:hover',
+				'.comment-meta .comment-author .fn .url:focus',
+				'.comment-meta .comment-metadata a:hover',
+				'.comment-meta .comment-metadata a:focus',
+				'.comment-content a:hover',
+				'.comment-content a:focus',
+				'.comment-body .reply .comment-reply-link:hover',
+				'.comment-navigation .nav-links a:hover',
+				'.comment-navigation .nav-links a:focus',
+				'.page-404-content a:hover',
+				'.page-404-content a:focus',
+				'.widget a:hover',
+				'.widget a:focus',
+				'.widget .widget-title a:hover',
+				'.widget .widget-title a:focus',
+				'.widget_search #searchform .search-submit:hover',
+				'.tabs-nav li.tab-active a',
+				'.tabs-nav li.tab-active',
+				'.site-footer a',
+				'.footer-social-links a:hover',
+				'.footer-social-links a:focus',
+				'.footer-menu li a:hover',
+				'.footer-menu li a:focus',
+				'ul.trail-items li a:hover span',
+				'.promo-three .post-category a',
+				'.post-excerpt .wp-block-file a:not(.wp-block-file__button)',
+				'.post-excerpt .wp-block-file a:not(.wp-block-file__button):focus',
+				'.post-excerpt .wp-block-file a:not(.wp-block-file__button):hover',
+				'.post-excerpt .wp-block-calendar #wp-calendar tfoot td a:hover',
+				'.post-excerpt .wp-block-calendar #wp-calendar tfoot td a:focus',
+			),
+		);
+
+		return apply_filters( 'peruse_accent_selectors', $selectors );
+	}
+endif;

@@ -7,6 +7,11 @@
  * @package Peruse
  */
 
+if ( ! defined( 'PERUSE_VERSION' ) ) {
+	// Replace the version number of the theme on each release.
+	define( 'PERUSE_VERSION', '1.0.8' );
+}
+
 if ( ! function_exists( 'peruse_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -25,7 +30,7 @@ if ( ! function_exists( 'peruse_setup' ) ) :
 		 * If you're building a theme based on Peruse, use a find and replace
 		 * to change 'peruse' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'peruse' );
+		load_theme_textdomain( 'peruse', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -54,7 +59,7 @@ if ( ! function_exists( 'peruse_setup' ) ) :
 		) );
 
 		/*
-		 * Peruse default core markup for search form, comment form, and comments
+		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
@@ -88,6 +93,25 @@ if ( ! function_exists( 'peruse_setup' ) ) :
 				)
 			)
 		);
+
+		/*
+		 * The tag list has advertised custom-background and wide-blocks since
+		 * the theme shipped, and neither was ever declared, so Background
+		 * Image never appeared in the customizer and wide alignment was
+		 * unavailable in the editor.
+		 */
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'peruse_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
+
+		add_theme_support( 'align-wide' );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );

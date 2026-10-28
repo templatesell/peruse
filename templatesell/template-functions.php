@@ -55,7 +55,11 @@ if (!function_exists('peruse_read_time')) :
         $word_per_min = ceil($word_per_min);
 
         if (absint($word_per_min) > 0) {
-            $word_count_strings = sprintf(_n('%s Min Reading', '%s Min Reading', number_format_i18n($word_per_min), 'peruse'), number_format_i18n($word_per_min));
+            $word_count_strings = sprintf(
+                /* translators: %s: estimated reading time in minutes. */
+                _n( '%s Min Reading', '%s Min Reading', $word_per_min, 'peruse' ),
+                number_format_i18n( $word_per_min )
+            );
             if ('post' == get_post_type()):
                 echo '<span class="min-read">';
                 echo esc_html($word_count_strings);

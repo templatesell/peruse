@@ -8,7 +8,7 @@
  * breadcrumb scripts.
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
- * General Peruse License as published by the Free Software Foundation; either version 2 of the License,
+ * General Public License as published by the Free Software Foundation; either version 2 of the License,
  * or (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
@@ -251,7 +251,7 @@ class Peruse_Breadcrumb_Trail {
 
                 $item = ! empty( $matches )
                     ? preg_replace( '/(<a.*?)([\'"])>/i', '$1$2 itemprop=$2item$2>', $item )
-                    : sprintf( '<a href="'.esc_url( $link_item ).'" itemprop="item">%s</a>', $item );
+                    : sprintf( '<a href="%1$s" itemprop="item">%2$s</a>', esc_url( $link_item ), $item );
 
                 // Add list item classes.
                 $item_class = 'trail-item';

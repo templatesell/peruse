@@ -52,6 +52,16 @@ require get_template_directory() . '/templatesell/customizer-category-control.ph
 require get_template_directory() . '/templatesell/customizer-radio-image-control.php';
 
 /**
+ * The accent colour's selector map, generated from style.css.
+ */
+require get_template_directory() . '/templatesell/accent-selectors.php';
+
+/**
+ * Block styles and block patterns.
+ */
+require get_template_directory() . '/templatesell/blocks.php';
+
+/**
  * Dynamic CSS file load
  */
 require get_template_directory() . '/templatesell/dynamic-css.php';
